@@ -26,7 +26,7 @@
    Your browser does not support the video tag.
    </video>
 
-*Vertical Promo Video*
+   *Vertical Promo Video*
 
 </div>
 
@@ -102,23 +102,21 @@ Screenshots and promotional images for Copy can be found in the [Promo/screensho
 
 ### QR Code
 
-![QR Code](Promo/qr-code.png)
+<img src="Promo/qr-code.png" width="150" height="150" alt="QR Code">
 
 *Scan to download the APK*
 
 ### Screenshots
 
-![Share Example](Promo/screenshots/share-example.png)
+<div align="center">
 
-*Sharing content to Copy*
+<img src="Promo/screenshots/share-example.png" width="200" alt="Share Example">
+<img src="Promo/screenshots/success-vibration.png" width="200" alt="Success Vibration">
+<img src="Promo/screenshots/back-to-app.png" width="200" alt="Back to App">
 
-![Success Vibration](Promo/screenshots/success-vibration.png)
+*App Flow: Sharing, Confirmation, and Return*
 
-*Confirmation with haptic feedback*
-
-![Back to App](Promo/screenshots/back-to-app.png)
-
-*Minimal UI that returns you to your previous app*
+</div>
 
 ## License
 
