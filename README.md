@@ -120,18 +120,6 @@ Screenshots and promotional images for Copy can be found in the [Promo/screensho
 
 *Minimal UI that returns you to your previous app*
 
-![Share Example](Promo/screenshots/share-example.png)
-
-*Sharing content to Copy*
-
-![Success Vibration](Promo/screenshots/success-vibration.png)
-
-*Confirmation with haptic feedback*
-
-![Back to App](Promo/screenshots/back-to-app.png)
-
-*Minimal UI that returns you to your previous app*
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
