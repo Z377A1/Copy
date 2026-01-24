@@ -77,13 +77,21 @@ class CopyActivity : Activity() {
 
         if (uris.isEmpty()) return null
 
-        // Construct ClipData with MIME types
-        val mimeTypes = uris.map { contentResolver.getType(it) ?: "*/*" }.toTypedArray()
-        val clip = ClipData("Copied Content", mimeTypes, ClipData.Item(uris[0]))
+        // 1. Official Android Way: Use ClipData.newUri for automatic MIME sniffing
+        // ContentResolver determines the correct MIME type (e.g., image/gif, image/jpeg)
+        val clip = ClipData.newUri(contentResolver, "Copied Media", uris[0])
 
-        // Add extra items for multi-selection
+        // 2. Chrome Secret: Add HTML fallback for Gboard/legacy app compatibility
+        val htmlContent = "<img src=\"${uris[0]}\">"
+        clip.addItem(ClipData.Item(null, htmlContent, null, null))
+
+        // 3. Plain text fallback for text-only apps
+        clip.addItem(ClipData.Item(uris[0].toString()))
+
+        // Add extra items for multi-selection (with HTML fallbacks)
         for (i in 1 until uris.size) {
             clip.addItem(ClipData.Item(uris[i]))
+            clip.addItem(ClipData.Item(null, "<img src=\"${uris[i]}\">", null, null))
         }
 
         return clip
